@@ -2,8 +2,8 @@
     "name": "devriffs/shippingbypostcode",
     "description": "Shipping by postcode module. Show or hide shipping method after postcode check",
     "require": {
-        "php": ">=7.1.0",
-        "magento/magento-composer-installer": "*"
+        "php": "^7.0|^7.1|^7.2",
+        "magento/framework": "*"
     },
     "suggest": {
 
