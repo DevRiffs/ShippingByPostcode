@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="DevRiffs_Menu::main_menu_item"
-             title="Postcodes"
+             title="Shipping by Postcode"
              module="DevRiffs_ShippingByPostcode"
              sortOrder="10"
              resource="DevRiffs_ShippingByPostcode::internal"/>
