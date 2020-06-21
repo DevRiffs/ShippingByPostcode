@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <shippingbypostcode>
+            <general>
+                <enabled>1</enabled>
+                <ship_only_to>1</ship_only_to>
+                <match_depth>0</match_depth>
+            </general>
+        </shippingbypostcode>
+    </default>
+</config>

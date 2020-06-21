@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="shippingbypostcode" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Shipping By Postcode</label>
+            <tab>sales</tab>
+            <resource>DevRiffs_ShippingByPostcode::internal</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Shipping by postcode settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ship_only_to" translate="label" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ship only to added postcodes</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Set Yes if you want to ship only to postcodes, added to database. If postcode is not in database, selected shipping method wont be allowed.
+                        <br/> Set No if you want to ship to all postcodes, except those in database. Postcodes in database will not have selected shipping method. ]]></comment>
+                </field>
+                <field id="match_depth" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Matching depth</label>
+                    <source_model>DevRiffs\ShippingByPostcode\Model\Source\Depth</source_model>
+                    <comment>Select if you want exact math. You can select depth of matching. Example: if you select 'First 3 symbols', then all postcodes that match first 3 symbols will be considered as matched and rules apply</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="postcode_listing_data_source" xsi:type="string">DevRiffs\ShippingByPostcode\Model\ResourceModel\Postcode\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="DevRiffs\ShippingByPostcode\Model\ResourceModel\Postcode\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">shippingbypostcode</argument>
+            <argument name="resourceModel" xsi:type="string">DevRiffs\ShippingByPostcode\Model\ResourceModel\Postcode</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Shipping\Model\Shipping">
+        <plugin name="is_carrier_allowed_by_postcode" type="DevRiffs\ShippingByPostcode\Plugin\AroundCollectRates" sortOrder="10" />
+    </type>
+
+</config>

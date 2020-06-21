@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="DevRiffs_Menu::main_menu_item"
+             title="Postcodes"
+             module="DevRiffs_ShippingByPostcode"
+             sortOrder="10"
+             resource="DevRiffs_ShippingByPostcode::internal"/>
+        <add id="DevRiffs_ShippingByPostcode::postcodes"
+             title="All postcodes"
+             module="DevRiffs_ShippingByPostcode"
+             sortOrder="1"
+             action="shippingbypostcode/postcodes"
+             parent="DevRiffs_Menu::main_menu_item"
+             resource="DevRiffs_ShippingByPostcode::all_postcodes"/>
+        <add id="DevRiffs_ShippingByPostcode::create_postcode"
+             title="Create postcode"
+             module="DevRiffs_ShippingByPostcode"
+             sortOrder="2"
+             action="shippingbypostcode/postcodes/new"
+             parent="DevRiffs_Menu::main_menu_item"
+             resource="DevRiffs_ShippingByPostcode::create_postcode"/>
+        <add id="DevRiffs_ShippingByPostcode::settings"
+             title="Settings"
+             module="DevRiffs_ShippingByPostcode"
+             sortOrder="3"
+             action="adminhtml/system_config/edit/section/shippingbypostcode"
+             parent="DevRiffs_Menu::main_menu_item"
+             resource="DevRiffs_ShippingByPostcode::settings"/>
+    </menu>
+</config>
